@@ -34,6 +34,8 @@ namespace LoggingKata
             // Complete the Parse method in TacoParser class first and then START BELOW ----------
 
             // TODO: Create two `ITrackable` variables with initial values of `null`. 
+            
+            
             // These will be used to store your two Taco Bells that are the farthest from each other.
             
             // TODO: Create a `double` variable to store the distance
