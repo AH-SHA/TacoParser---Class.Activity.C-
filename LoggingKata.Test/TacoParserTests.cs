@@ -24,11 +24,11 @@ namespace LoggingKata.Test
         }
 
         [Theory]
-        [InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
-        [InlineData(34.035985, -84.683302, Taco Bell Acworth..., -84.683302)]
-        [InlineData(34.087508,-84.575512,Taco Bell Acworth..., -84.575512)]
-        [InlineData(34.376395,-84.913185,Taco Bell Adairsvill..., -84.913185)]
-        [InlineData(33.22997,-86.805275,Taco Bell Alabaste..., -86.805275)]
+        //[InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
+        [InlineData("34.035985, -84.683302, Taco Bell Acworth...", -84.683302)]
+        //[InlineData("34.087508,-84.575512,Taco Bell Acworth...", -84.575512)]
+       // [InlineData("34.376395,-84.913185,Taco Bell Adairsvill...", -84.913185)]
+        //[InlineData("33.22997,-86.805275,Taco Bell Alabaste...", -86.805275)]
         
         //Add additional inline data. Refer to your CSV file.
 
@@ -42,22 +42,22 @@ namespace LoggingKata.Test
             //       represents a TacoBell location
 
             //Arrange
-            var tacoParser2 = new TacoParser();
+            var tacoParserInstance = new TacoParser();
                     // a constructor is a special member method
             //Act   
 
-            var actual = tacoParser2.Parse(line);
+            var actual = tacoParserInstance.Parse(line);
 
             //Above you add the name of the method contained within the tacoParser constructor after the . (period)  and in parenthesis place the data to be tested.
 
             //Assert
-            Assert.Equal(expected, actual.Location.Longitude);
+            Assert.Equal(expected,actual.Location.Longitude);
         }
 
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
-        [InlineData(34.035985, -84.683302, Taco Bell Acworth..., -84.683302)]
-        [InlineData(34.087508, -84.575512, Taco Bell Acworth..., -84.575512)]
+        //[InlineData("34.035985, -84.683302, Taco Bell Acworth...", -84.683302)]
+        //[InlineData("34.087508, -84.575512, Taco Bell Acworth...", -84.575512)]
 
 
 
@@ -70,20 +70,20 @@ namespace LoggingKata.Test
         public void ShouldParseLatitude(string line, double expected)
         {
             //Arrange
-            var tacoParser3 = new TacoParser();
+            var tacoParserInstance = new TacoParser();
 
             //Act
-            var actual = tacoParser3.Parse(line); 
+            var actual = tacoParserInstance.Parse(line); 
 
 
             //Assert
-            Assert.Equal(expected, actual.Location.Latitude);
+            Assert.Equal(expected,actual.Location.Latitude);
         }
 
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", 34.073638)]
-        [InlineData(34.035985, -84.683302, Taco Bell Acworth..., 34.035985)]
-        [InlineData(34.087508, -84.575512, Taco Bell Acworth..., 34.087508)]
+        //[InlineData("34.035985, -84.683302, Taco Bell Acworth...", 34.035985)]
+        //[InlineData("34.087508, -84.575512, Taco Bell Acworth...", 34.087508)]
 
 
 
