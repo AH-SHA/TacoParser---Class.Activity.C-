@@ -38,12 +38,18 @@
             
             var name = cells[2];
 
-            // TODO: Create a TacoBell class -- DONE
-            // that conforms to ITrackable   -- DONE in Class file
+
+            // TODO: Create a TacoBell class
+            //          -- DONE 06.05.2025
+
+            // that conforms to ITrackable
+            //          -- DONE 06.05.2025 in 'Class' file
 
 
             // TODO: Create an instance of the Point Struct
+                    // a 'struct' -  a stores and calls a value, unlike a class, which is a reference
             // TODO: Set the values of the point correctly (Latitude and Longitude) 
+
             var point = new Point();
             point.Latitude = latitude;
             point.Longitude = longitude;
@@ -59,7 +65,7 @@
             // TODO: Then, return the instance of your TacoBell class,
             // since it conforms to ITrackable
 
-            return null;
+            return tacoBell;
         }
     }
 }
