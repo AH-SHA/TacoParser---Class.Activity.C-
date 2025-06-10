@@ -17,6 +17,7 @@ namespace LoggingKata.Test
 
             //Act
             var actual = tacoParser.Parse("34.073638, -84.677017, Taco Bell Acwort...");
+            var actual2 = tacoParser.Parse("32.571331, -85.499655, Taco Bell Auburn...");
 
             //Assert
             Assert.NotNull(actual);
@@ -26,7 +27,10 @@ namespace LoggingKata.Test
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
         [InlineData("34.035985, -84.683302, Taco Bell Acworth...", -84.683302)]
-               
+        [InlineData("34.795116, -86.97191, Taco Bell Athens...", -86.97191)]
+        [InlineData("34.018008, -86.079099,Taco Bell Attall...", -86.079099)]
+        [InlineData("32.571331, -85.499655, Taco Bell Auburn...", -85.499655)]
+
         //Add additional inline data. Refer to your CSV file.
         public void ShouldParseLongitude(string line, double expected)
         {
@@ -56,6 +60,9 @@ namespace LoggingKata.Test
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", 34.073638)]
         [InlineData("34.035985, -84.683302, Taco Bell Acworth...", 34.035985)]
+        [InlineData("34.795116, -86.97191, Taco Bell Athens..." , 34.795116)]
+        [InlineData("34.018008, -86.079099,Taco Bell Attall...", 34.018008)]
+        [InlineData("32.571331, -85.499655, Taco Bell Auburn...", 32.571331)]
        
         public void ShouldParseLatitude(string line, double expected)
         {
